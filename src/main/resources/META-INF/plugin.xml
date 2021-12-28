@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>org.example.com/ryan/prettyBeanTool</id>
+<!--    <name>Plugin display name here</name>-->
+    <vendor email="354383436@qq.com">ryan</vendor>
+
+<!--    <description><![CDATA[-->
+<!--    Enter short description for your plugin here.<br>-->
+<!--    <em>most HTML tags may be used</em>-->
+<!--    ]]></description>-->
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.ryan.plugin.action.BeanMappingAction"
+                class="com.ryan.plugin.action.BeanMappingAction" text="PrettyBeanTool"
+                description="Map the fields of the first class to the second class" icon="AllIcons.Actions.BuildLoadChanges">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl M"/>
+        </action>
+    </actions>
+</idea-plugin>
